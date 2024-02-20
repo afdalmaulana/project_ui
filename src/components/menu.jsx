@@ -1,31 +1,43 @@
-import { FaTshirt } from "react-icons/fa";
-import { SiHomeassistant } from "react-icons/si";
-import { GrYoga } from "react-icons/gr";
-import { GiOpenBook } from "react-icons/gi";
-import { FaHiking } from "react-icons/fa";
-export default function Menu() {
+import clsx from "clsx";
+
+/**
+ * Menu Component
+ *
+ * Menu Component will be placed on the top of the page with wrap with navbar
+ *
+ * @param {import("react").ReactNode} children - child react node Element
+ *
+ * @returns {JSX.Element} 
+ */
+export default function Menu({ children }) {
   return (
     <div className="border-b-4 w-full flex justify-between px-[7rem] h-[10rem] ">
-      <div className="hover:bg-green-300 w-[12rem] px-[4rem] py-[2.5rem]">
-        <FaTshirt className="text-6xl text-blue-700" />
-        <div>Fashion</div>
-      </div>
-      <div className="hover:bg-green-300 w-[11.6rem] px-[2rem] py-[2.5rem]">
-        <SiHomeassistant className="text-6xl text-blue-700 ml-7" />
-        <div>Home & Garden</div>
-      </div>
-      <div className="hover:bg-green-300 w-[11.6rem] px-[2rem] py-[2.5rem]">
-        <GrYoga className="text-6xl text-blue-700 ml-7" />
-        <div>Health & Beauty</div>
-      </div>
-      <div className="hover:bg-green-300 w-[11.6rem] px-[2rem] py-[2.5rem]">
-        <GiOpenBook className="text-6xl text-blue-700 ml-7" />
-        <div>Office & School</div>
-      </div>
-      <div className="hover:bg-green-300 w-[12rem] px-[1rem] py-[2.5rem]">
-        <FaHiking className="text-6xl text-blue-700 ml-12" />
-        <div>Activities & Outdoors</div>
-      </div>
+      {children}
     </div>
   );
+}
+
+/**
+ * Create Item For The menu
+ *
+ * @param {Object} props 
+ * @param {String} props.name - The name of the menu item
+ * @param {React.ReactNode} props.children - The icon of the menu item
+ * @param {string} props.className - The className of the menu item 
+ *
+ *
+ * @return {JSX.Element}
+ *
+ * @example 
+ * // Example usage of Menu.Item component:
+ * <Menu.Item name="Home" icon=<FaHiking className="text-6xl text-blue-700 ml-12" />"  />
+*/
+Menu.Item = ({ name, children, className = '', ...rest }) => {
+  const baseClass = clsx("hover:bg-green-300", className);
+  return (
+    <div className={baseClass} {...rest}>
+      {children}
+      <div>{name}</div>
+    </div>
+  )
 }
