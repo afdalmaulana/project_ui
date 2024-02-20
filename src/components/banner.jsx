@@ -10,18 +10,18 @@ export default function Banner() {
       </div>
       <div className="flex">
         <div className="relative">
-          <button className="text-[#2269D8] border rounded-xl w-[18rem] border-blue-700 px-10 py-4 mt-10">
+          <button className="text-[#2269D8] text-[23px] border rounded-xl w-[357px] mt-[5.5rem] h-[65px] border-blue-700">
             Explore Marketplace
           </button>
-          <FaArrowRightLong className="absolute text-blue-700 text-2xl top-[3.5rem] right-[2rem]" />
         </div>
         <div className="relative">
-          <button className="bg-blue-700 ml-5 w-[22rem] text-white px-10 py-4 rounded-xl mt-10">
+          <button className="bg-blue-700 ml-[1rem] w-[410px] h-[65px] text-[23px] text-white rounded-xl mt-[5.5rem] pr-10">
             Access business only pricing
           </button>
-          <FaArrowRightLong className="absolute text-white text-2xl top-[3.5rem] right-[2rem]" />
         </div>
       </div>
+      <FaArrowRightLong className="absolute text-blue-700 text-2xl top-[741px] left-[400px]" />
+      <FaArrowRightLong className="absolute text-white text-2xl top-[741px] left-[833px]" />
     </div>
   );
 }

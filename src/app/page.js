@@ -2,6 +2,7 @@ import Banner from "@/components/banner";
 import Menu from "@/components/menu";
 import Navbar from "@/components/navbar";
 import SearchBar from "@/components/searchBar";
+import WorkSystem from "@/components/workSystem";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <SearchBar/>
       <Menu/>
       <Banner/>
+      <WorkSystem/>
     </div>
   );
 }
