@@ -3,7 +3,7 @@ export default function Navbar() {
   return (
     <Box>
       <div className="py-3 text-gray-500">
-        <div>Location</div>
+        <div className="font">Location</div>
       </div>
       <div className="flex justify-between py-3 px-12 text-gray-500 ">
         <div className="mr-5">Our Blog</div>
