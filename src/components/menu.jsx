@@ -45,3 +45,25 @@ export default function Menu() {
     </div>
   );
 }
+
+/**
+ * Create Item For The menu
+ *
+ * @param {Object} props 
+ * @param {String} props.name - The name of the menu item
+ * @param {React.ReactNode} props.children - The icon of the menu item
+ * @param {string} props.className - The className of the menu item 
+ * @param {any} props.rest
+ *
+ * @return {JSX.Element}
+ *
+*/
+Menu.Item = ({ name, children, className, ...rest }) => {
+  const baseClass = clsx("hover:bg-green-300", className);
+  return (
+    <div className={baseClass} {...rest}>
+      {children}
+      <div>{name}</div>
+    </div>
+  )
+}
