@@ -1,27 +1,27 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 export default function Banner() {
   return (
-    <div className="bg-cover w-full px-[6rem] py-[10rem] ">
-      <div className="text-[#2269D8] text-[80px] font-semibold">
+    <div className="bg-cover w-full px-[1rem] tablet:px-[6rem] desktop:px-[6rem] py-[8rem] ">
+      <div className="text-[#2269D8] text-[28px] tablet:text-[42px] desktop:text-[60px] font-semibold">
         Buy Local Sell Global
       </div>
-      <div className="ml-12 text-[40px]">
+      <div className="ml-5 desktop:ml-12 text-[14px] tablet:text-[20px] desktop:text-[32px]">
         Suistainable Products for the world
       </div>
       <div className="flex">
         <div className="relative">
-          <button className="text-[#2269D8] text-[23px] border rounded-xl w-[357px] mt-[5.5rem] h-[65px] border-blue-700">
+          <button className="text-[#2269D8] mt-5 text-[10px] border rounded-lg w-[130px] h-[25px] tablet:w-[190px] tablet:py-2 tablet:h-[40px] tablet:text-[14px] tablet:mt-10  border-blue-700 pr-5 desktop:w-[280px] desktop:h-[50px] desktop:text-[18px] desktop:font-semibold ">
             Explore Marketplace
           </button>
+          <FaArrowRightLong className="absolute text-blue-700 text-md top-[24px] left-[110px] tablet:top-[53px] tablet:left-[161px] desktop:left-[224px] desktop:font-semibold desktop:text-2xl" />
         </div>
         <div className="relative">
-          <button className="bg-blue-700 ml-[1rem] w-[410px] h-[65px] text-[23px] text-white rounded-xl mt-[5.5rem] pr-10">
+          <button className="bg-blue-700 mt-5 text-white text-[10px] border rounded-lg w-[170px] h-[25px] border-blue-700 pr-3 ml-1 tablet:w-[230px] tablet:py-2 tablet:h-[40px] tablet:text-[14px] tablet:mt-10 desktop:ml-5 desktop:w-[300px] desktop:h-[50px] desktop:text-[18px] desktop:font-semibold desktop:pr-8">
             Access business only pricing
           </button>
+          <FaArrowRightLong className="absolute text-white text-sm top-[26px] left-[155px] tablet:top-[53px] tablet:left-[211px] desktop:left-[288px] desktop:font-semibold desktop:text-2xl " />
         </div>
       </div>
-      <FaArrowRightLong className="absolute text-blue-700 text-2xl top-[741px] left-[400px]" />
-      <FaArrowRightLong className="absolute text-white text-2xl top-[741px] left-[833px]" />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import activiesOutdoors from "../../public/Activities.svg";
 import Image from "next/image";
 export default function Menu() {
   return (
-    <div className="border-b-4 w-full flex justify-between px-[7rem] h-[10rem] ">
+    <div className="w-full flex flex-wrap desktop:flex-nowrap justify-between px-[1rem] desktop:px-[7rem] ">
       <Image
         src={fashion}
         alt="fashion"
@@ -58,8 +58,8 @@ export default function Menu() {
  * @return {JSX.Element}
  *
  */
-Menu.Item = ({ name, children, className, ...rest }) => {
-  const baseClass = clsx("hover:bg-green-300", className);
+Menu.Item = function MenuItem({ name, children, className, ...rest }) {
+  const baseClass = clsx("text-[12px]", className);
   return (
     <div className={baseClass} {...rest}>
       {children}

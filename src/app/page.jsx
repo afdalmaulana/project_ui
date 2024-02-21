@@ -1,6 +1,7 @@
 import Banner from "@/components/banner";
 import Navbar from "@/components/navbar";
 import SearchBar from "@/components/searchBar";
+import { WorkFlow } from "@/components/workFlow";
 
 import { FixturesMenu } from "@/fixtures/menu";
 
@@ -11,8 +12,9 @@ export default function Home() {
     <>
       <Navbar />
       <SearchBar />
-      {/* <FixturesMenu /> */}
-      {/* <Banner /> */}
+      <FixturesMenu />
+      <Banner />
+      <WorkFlow />
     </>
   );
 }
