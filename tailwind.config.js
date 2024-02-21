@@ -14,11 +14,10 @@ module.exports = {
       },
     },
     screens: {
-      'tablet': '640px',
-
-      'laptop': '1024px',
-
-      'desktop': '1280px',
+      'mobile': '640px',
+      'tablet' : '768px',
+      'desktop': '1024px',
+      'widescreen': '1280px',
     }
   },
   plugins: [],

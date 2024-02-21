@@ -1,28 +1,19 @@
 import clsx from "clsx";
+import location from "../../public/location.svg";
+import Image from "next/image";
 export default function Navbar() {
   return (
-    <Box>
-      <div className="py-3 text-gray-500">
-        <div className="font">Location</div>
+    <div className="border-b-2 border-gray-300 bg-neutral-100 w-full h-10 flex justify-between pr-8 pl-[1.5rem] py-1">
+      <div className="text-gray-500 flex">
+        <Image src={location} alt="location" className="mr-1 h-[30px]" />
+        <div className="hidden desktop:block mt-2 text-[12px]">Location</div>
       </div>
-      <div className="flex justify-between py-3 px-12 text-gray-500 ">
+      <div className="hidden desktop:flex justify-between text-gray-500 mt-2 mr-[3.5rem] text-[12px]">
         <div className="mr-5">Our Blog</div>
         <div className="mr-5">Track Shipment</div>
         <div className="mr-5">Creating Global Impact</div>
         <div className="mr-5">Gift Certificate</div>
       </div>
-    </Box>
+    </div>
   );
 }
-
-const Box = ({ children }) => {
-  const baseClass =
-    "border-b-2 border-gray-300 bg-neutral-100 w-full h-13 flex justify-between px-5";
-
-  const margeClass = clsx(baseClass, {});
-  return (
-    <>
-      <div className={margeClass}>{children}</div>
-    </>
-  );
-};
