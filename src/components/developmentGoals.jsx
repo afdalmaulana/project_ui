@@ -12,7 +12,7 @@ export const Goals = () => {
         Our sustainable development goals
       </div>
       <div className="flex justify-center">
-        <div className="flex desktop:gap-10 flex-wrap desktop:flex-nowrap ">
+        <div className="flex gap-2 px-10 desktop:gap-10 flex-wrap desktop:flex-nowrap ">
           <Image src={noPoverty} alt="noPoverty" width={150} height={150} />
           <Image src={zeroHunger} alt="Zero" width={150} height={150} />
           <Image src={goodHealth} alt="health" width={150} height={150} />
