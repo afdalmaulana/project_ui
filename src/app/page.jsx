@@ -1,5 +1,7 @@
 import Banner from "@/components/banner";
+import { Goals } from "@/components/developmentGoals";
 import Navbar from "@/components/navbar";
+import { Category } from "@/components/productCategory";
 import SearchBar from "@/components/searchBar";
 import { WorkFlow } from "@/components/workFlow";
 
@@ -15,6 +17,8 @@ export default function Home() {
       <FixturesMenu />
       <Banner />
       <WorkFlow />
+      <Category />
+      <Goals />
     </>
   );
 }
