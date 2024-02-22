@@ -5,22 +5,28 @@ import goodHealth from "../../public/goodHealth.svg";
 import qualityEducation from "../../public/qualityEducation.svg";
 import qualityGender from "../../public/qualityGender.svg";
 import cleanWater from "../../public/cleanWater.svg";
-export const Goals = () => {
-  return (
-    <div className="w-full text-center">
-      <div className=" desktop:py-8 desktop:text-2xl desktop:font-semibold">
-        Our sustainable development goals
-      </div>
-      <div className="flex justify-center">
-        <div className="flex gap-2 px-10 desktop:gap-10 flex-wrap desktop:flex-nowrap ">
-          <Image src={noPoverty} alt="noPoverty" width={150} height={150} />
-          <Image src={zeroHunger} alt="Zero" width={150} height={150} />
-          <Image src={goodHealth} alt="health" width={150} height={150} />
-          <Image src={qualityEducation} alt="Zero" width={150} height={150} />
-          <Image src={qualityGender} alt="Zero" width={150} height={150} />
-          <Image src={cleanWater} alt="Zero" width={150} height={150} />
-        </div>
-      </div>
-    </div>
-  );
+import cleanEnergi from "../../public/cleanEnergi.svg";
+import economic from "../../public/economic.svg";
+import innovation from "../../public/innovation.svg";
+import sustainable from "../../public/sustainable.svg";
+import responsible from "../../public/responsible.svg";
+import reducedInequalities from "../../public/reducedInequalities.svg";
+import { DevGoals } from "@/fixtures/devGoals";
+
+export const goalsData = [
+  { image: noPoverty, title: "No Poverty" },
+  { image: zeroHunger, title: "Zero Hunger" },
+  { image: goodHealth, title: "Good Health" },
+  { image: qualityEducation, title: "Quality Education" },
+  { image: qualityGender, title: "Quality Gender" },
+  { image: cleanWater, title: "Clean Water" },
+  { image: cleanEnergi, title: "Clean Energy" },
+  { image: economic, title: "Economic Growth" },
+  { image: innovation, title: "Innovation" },
+  { image: reducedInequalities, title: "Reduced Inequalities" },
+  { image: sustainable, title: "Sustainable Cities" },
+  { image: responsible, title: "Responsible Consumption" },
+];
+export const GoalsComponent = () => {
+  return <DevGoals data={goalsData} />;
 };

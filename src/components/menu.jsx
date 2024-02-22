@@ -6,7 +6,7 @@ import activiesOutdoors from "../../public/Activities.svg";
 import Image from "next/image";
 export default function Menu() {
   return (
-    <div className="w-full flex flex-wrap desktop:flex-nowrap justify-between px-[1rem] desktop:px-[7rem] ">
+    <div className="w-full cursor-pointer flex flex-wrap desktop:flex-nowrap justify-between px-[1rem] desktop:px-[7rem] ">
       <Image
         src={fashion}
         alt="fashion"

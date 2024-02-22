@@ -2,6 +2,7 @@ import { PiShoppingCartThin } from "react-icons/pi";
 import { IoMdSearch } from "react-icons/io";
 import fyaril from "../../public/Group.svg";
 import Image from "next/image";
+import { AiOutlineMenuFold } from "react-icons/ai";
 export default function SearchBar() {
   return (
     <div className="border-b-4 w-full h-[70px] tablet:h-[72px] flex">
@@ -19,9 +20,12 @@ export default function SearchBar() {
           </button>
         </div>
       </div>
+      <div className="mt-4 text-4xl tablet:hidden mobile:block">
+        <AiOutlineMenuFold />
+      </div>
       <div className="hidden desktop:flex text-[14px] py-6">
-        <div>Start Selling Globally with Fyaril</div>
-        <div className="ml-12">English</div>
+        <button>Start Selling Globally with Fyaril</button>
+        <button className="ml-12">English</button>
         <div className="ml-6">USD</div>
         <div className="ml-6">Login</div>
         <div className="ml-6">Sign Up</div>
