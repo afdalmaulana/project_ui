@@ -1,4 +1,5 @@
 "use client";
+import clsx from "clsx";
 import fashion from "../../public/Fashoin.svg";
 import homeGarden from "../../public/HomeGarden.svg";
 import healthBeauty from "../../public/HealthandBeauty.svg";
@@ -9,7 +10,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
 
-export default function Menu() {
+export default function Menu({ children }) {
   const [fashionAppear, setFashion] = useState(false);
   const [showMenType, setMenType] = useState(false);
   const [showWomenType, setWomenType] = useState(false);
@@ -17,7 +18,8 @@ export default function Menu() {
   return (
     <>
       <div className="w-full cursor-pointer flex flex-wrap desktop:flex-nowrap justify-between px-[1rem] desktop:px-[7rem] ">
-        <button onClick={() => setFashion(!fashionAppear)}>
+        {children}
+        {/* <button onClick={() => setFashion(!fashionAppear)}>
           <Image
             src={fashion}
             alt="fashion"
@@ -54,8 +56,8 @@ export default function Menu() {
           height={400}
           className="hover:bg-[#BBFD01]"
         />
-      </div>
-      <div
+      </div> */}
+        {/* <div
         className={` absolute h-0 w-0  left-[190px] desktop:left-[217px] top-[369px] desktop:top-[273px] border-b-[30px] border-white  border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent ${
           fashionAppear ? "block" : "hidden"
         }`}
@@ -76,15 +78,15 @@ export default function Menu() {
               onClick={() => setMenType(!showMenType)}
             >
               {showMenType ? <IoIosArrowUp /> : <IoIosArrowDown />}
-            </button>
-            {/* <div
+            </button> */}
+        {/* <div
               className={`absolute right-1 top-0 text-2xl ${
                 showMenType ? <IoIosArrowUp /> : <IoIosArrowDown />
               }`}
             >
               <IoIosArrowUp />
             </div> */}
-          </div>
+        {/* </div>
           <div className="border-b-2 border-slate-200 font-semibold pb-4 mt-4 relative">
             Women
             <button
@@ -104,7 +106,7 @@ export default function Menu() {
             </button>
           </div>
         </div>
-        <div className="w-[80%] h-[1px] bg-black"></div>
+          <div className="w-[80%] h-[1px] bg-black"></div> */}
       </div>
     </>
   );
@@ -122,12 +124,11 @@ export default function Menu() {
  * @return {JSX.Element}
  *
  */
-Menu.Item = function MenuItem({ name, children, className, ...rest }) {
+Menu.Item = function MenuItem({ children, className, ...rest }) {
   const baseClass = clsx("text-[12px]", className);
   return (
     <div className={baseClass} {...rest}>
       {children}
-      <div>{name}</div>
     </div>
   );
 };
