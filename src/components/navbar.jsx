@@ -26,8 +26,18 @@ export default function Navbar() {
           <div className="mr-5">Gift Certificate</div>
         </div>
       </div>
+      {/* // height:0px;
+//  width:0px;
+//  border-bottom:solid 120px blue;
+//  border-left:solid 80px red;
+//  border-right:solid 80px yellow; */}
       <div
-        className={`absolute right-[35px] top-[1.25rem] z-20 w-[19rem] items-center bg-[#2269D8] opacity-90 px-12 py-8 rounded-md ${
+        className={`absolute h-0 w-0 right-[35px] top-[5.25px] rotate-[90deg] border-b-[30px] border-b-[#2269D8]  border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent ${
+          navbar ? "block" : "hidden"
+        }`}
+      ></div>
+      <div
+        className={`absolute right-[39px] top-[9.25px] z-20 w-[19rem] items-center bg-[#2269D8] px-12 py-8 rounded-md ${
           navbar ? "block" : "hidden"
         }`}
       >
@@ -41,3 +51,9 @@ export default function Navbar() {
     </>
   );
 }
+
+// height:0px;
+//  width:0px;
+//  border-bottom:solid 120px blue;
+//  border-left:solid 80px red;
+//  border-right:solid 80px yellow;
