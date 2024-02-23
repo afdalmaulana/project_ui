@@ -19,6 +19,12 @@ export default function Navbar() {
             {navbar ? <IoClose /> : <GiHamburgerMenu />}
           </button>
         </div>
+        <div className="hidden mr-[3.5rem] desktop:flex text-[12px] mt-2">
+          <div className="mr-5">Our Blog</div>
+          <div className="mr-5">Track Shipment</div>
+          <div className="mr-5">Creating Global Impact</div>
+          <div className="mr-5">Gift Certificate</div>
+        </div>
       </div>
       <div
         className={`absolute right-[35px] top-[1.25rem] z-20 w-[19rem] items-center bg-[#2269D8] opacity-90 px-12 py-8 rounded-md ${
