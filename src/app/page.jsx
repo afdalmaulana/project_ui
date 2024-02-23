@@ -1,3 +1,4 @@
+"use client";
 import Banner from "@/components/banner";
 import { Goals } from "@/components/developmentGoals";
 import Navbar from "@/components/navbar";
