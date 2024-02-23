@@ -23,6 +23,7 @@ export const FixturesMenu = () => {
           width={400}
           height={400}
           onMouseEnter={() => setFashion(!fashionAppear)}
+          onMouseLeave={() => setFashion(!fashionAppear)}
         />
       </Menu.Item>
       <Menu.Item className=" w-[11.6rem] px-[2rem] py-[2.5rem]">
