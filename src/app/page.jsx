@@ -4,8 +4,7 @@ import Navbar from "@/components/navbar";
 import { Category } from "@/components/productCategory";
 import SearchBar from "@/components/searchBar";
 import { WorkFlow } from "@/components/workFlow";
-
-import { FixturesMenu } from "@/fixtures/menu";
+import { FixturesMenu } from "@/fixtures/Menu";
 
 //TODO: the icons are not showing up
 
