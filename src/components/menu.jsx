@@ -125,7 +125,7 @@ export default function Menu({ children }) {
  *
  */
 Menu.Item = function MenuItem({ children, className, ...rest }) {
-  const baseClass = clsx("text-[12px]", className);
+  const baseClass = clsx("text-[12px] hover:bg-[#BBFD01]", className);
   return (
     <div className={baseClass} {...rest}>
       {children}
