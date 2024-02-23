@@ -1,7 +1,10 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 export default function Banner() {
   return (
-    <div className="bg-cover w-full px-[1rem] tablet:px-[6rem] desktop:px-[6rem] py-[8rem] ">
+    <div
+      className="bg-cover w-full px-[1rem] tablet:px-[6rem] desktop:px-[7rem] py-[8rem] "
+      style={{ backgroundImage: "url('/background.png')" }}
+    >
       <div className="text-[#2269D8] text-[28px] tablet:text-[42px] desktop:text-[60px] font-semibold">
         Buy Local Sell Global
       </div>
